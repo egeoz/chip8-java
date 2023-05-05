@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chip8.chip8.MainWindowController">
+   <children>
+      <MenuBar id="menu" prefHeight="27.0" prefWidth="635.0">
+        <menus>
+          <Menu id="menuFile" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onMenuFileOpenClick" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#onMenuFileQuit" text="Quit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Emulation">
+            <items>
+              <MenuItem fx:id="menuEmulationPause" disable="true" mnemonicParsing="false" onAction="#onMenuEmulationPause" text="Pause" />
+                  <MenuItem fx:id="menuEmulationContinue" disable="true" mnemonicParsing="false" onAction="#onMenuEmulationContinue" text="Continue" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onMenuEmulationSpeedSlow" text="Slow" />
+                  <MenuItem mnemonicParsing="false" onAction="#onMenuEmulationSpeedNormal" text="Normal" />
+                  <MenuItem mnemonicParsing="false" onAction="#onMenuEmulationSpeedFast" text="Fast" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onMenuHelpAbout" text="About" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Canvas id="canvas" fx:id="canvas" height="495.0" width="975.0" />
+   </children>
+</VBox>
